@@ -46,7 +46,7 @@ public class Main {
             }
 
         }
-        float persent= sumeven/size;
+        float persent= (float)sumeven/size;
         System.out.println(sumeven+" Четных "+persent*100+"%");
     }
 
