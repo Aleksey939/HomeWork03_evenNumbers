@@ -8,12 +8,33 @@ public class Main {
     public static void main(String[] args) {
 
         File file = new File("number.txt");
-        List<Integer> listintov = new ArrayList<Integer>();
+
         Scanner sc = null;
 
         try {
 
             sc = new Scanner(file);
+            evenNumbers(sc);
+        }
+        catch (FileNotFoundException e1) {
+            e1.printStackTrace();
+        }
+        finally {
+            sc.close();
+
+        }
+    }
+
+
+
+    public static void evenNumbers(Scanner scanner) throws FileNotFoundException {
+
+        List<Integer> listintov = new ArrayList<Integer>();
+        Scanner sc = scanner;
+
+        try {
+
+
 
             while (sc.hasNextLine()) {
                 Integer line = sc.nextInt();
@@ -22,8 +43,6 @@ public class Main {
                 System.out.println(line);
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } finally {
             sc.close();
 
@@ -46,11 +65,13 @@ public class Main {
             }
 
         }
-        float persent= sumeven/size;
+        float persent= (float)sumeven/size;
         System.out.println(sumeven+" Четных "+persent*100+"%");
+
     }
 
 
-    }
+
+}
 
 
