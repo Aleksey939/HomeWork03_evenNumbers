@@ -27,12 +27,12 @@ public class Main {
 
 
 
-    public static void evenNumbers(Scanner scanner) throws FileNotFoundException {
+    public static void evenNumbers(Scanner scanner)  {
 
         List<Integer> listintov = new ArrayList<Integer>();
         Scanner sc = scanner;
 
-        try {
+      
 
 
 
@@ -41,12 +41,9 @@ public class Main {
 
                 listintov.add(line);
                 System.out.println(line);
-            }
+            
 
-        } finally {
-            sc.close();
-
-        }
+     
 
 
         int size=listintov.size();
